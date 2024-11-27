@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Home</title>
+<link rel="stylesheet" type="text/css" href="Styles/RegisterForm.css">
+<script type="text/javascript" src="js/Reg.js"></script>
+
+</head>
+
+<body>
+ <image class="logo" src="Image/bus-logo.png" alt="Bus System Logo"  width="300px" height="auto">
+
+<form action="insert.php" method="POST"   >
+ <fieldset style="margin-left:400px;background:linear-gradient(to bottom,#33ccff 0%,#ff99cc 100%);">
+    <h1 style ="text-align:center">Registration Form</h1>
+  First Name:           
+	<input type="text" id="first-name" name="firstname" placeholder="Enter your first name" required>
+    
+    Last Name:
+    <input type="text" id="last-name" name="lastname" placeholder="Enter your last name" required>
+    
+    <br><br>
+	
+	Gender:<br>
+	<input type="radio" name="gender" value="m">Male
+	<input type="radio" name="gender" value="f">Female<br><br> 
+	
+	 <label for="id-type">Select ID Type:</label>
+    <select id="id-type" onchange="toggleIDField()">
+      <option value="nic">NIC</option>
+      <option value="passport">Passport</option>
+    </select><br><br>
+    
+    <div id="nic-field">
+      <label for="nic">NIC:</label>
+      <input type="text" id="nic" name="nic">
+    </div>
+    
+    <div id="passport-field" style="display: none;">
+      <label for="passport">Passport ID:</label>
+      <input type="text" id="passport" name="passport">
+    </div><br><br>
+	
+	user name:<br>
+	<input type="text" name="username" placeholder="Enter your user name" required><br><br><br>
+	
+	Contact Number:
+	<input type="phone" name="mobile" placeholder="0777777777" pattern="[0-9]{10}" required>
+	
+	Email:
+	<input type="email" name="email" placeholder="abc@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}" required><br><br>
+	
+	
+    Password:<br>
+    <input type="password" id="pwd" name="pwd" required><br><br>
+
+    Confirm Password:<br>
+    <input type="password" id="cnfrmpwd" name="cnfrmpwd" required><br><br>
+
+    <input type="checkbox" id="checkBox" name="checkBox" onclick="enableButton()">I agree to the terms and conditions
+    <br><br>
+
+    <input type="submit" id="submitBtn" value="Register" onclick="return checkPassword()"  disabled>
+  <script>
+    function toggleIDField() {
+      var idType = document.getElementById("id-type").value;
+      var nicField = document.getElementById("nic-field");
+      var passportField = document.getElementById("passport-field");
+      
+      if (idType === "nic") {
+        nicField.style.display = "block";
+        passportField.style.display = "none";
+      } else if (idType === "passport") {
+        nicField.style.display = "none";
+        passportField.style.display = "block";
+      }
+    }
+	
+	     
+  </script>
+    
+   
+</fieldset>
+</form>
+</body>

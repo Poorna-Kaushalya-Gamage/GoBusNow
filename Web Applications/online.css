@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(rgb(71, 71, 219), lightblue);
+    text-shadow: 3px,3px,2px;
+    box-shadow: 3px, 3px,2px;
+     font-style:bold ;
+}
+.container{
+    width: 750px;
+    height: 500px;
+    border: 1px solid black;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+
+}
+.container h1{
+    text-align: center;
+}
+.cards img{
+    width: 75px;
+    align-items: center;
+    position: relative;
+    right: 100px;
+}
+.selection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.selection select{
+    padding: 10px,20px;
+}
+.button{
+    background-color: aquamarine;
+    color:black;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    transition: 1.2;
+    border-radius: 7px;
+    cursor: pointer;
+    
+}
+.input-group{
+    
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+.input-control .error {
+    color: #ff3860;
+    font-size: 5px;
+    height: 13px;
+    
+}
+.error{
+    text-shadow: 3px,3px,3px #ff3860 ;
+    color: #ff3860;
+    margin-top: 10px;
+}
